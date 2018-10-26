@@ -1,0 +1,2 @@
+class DcpPuma < ApplicationRecord
+end
