@@ -1,0 +1,2 @@
+class Pum < ApplicationRecord
+end

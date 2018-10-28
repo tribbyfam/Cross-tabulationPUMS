@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pums
   root to: 'static#homepage'
 
   resources :dcp_pumas

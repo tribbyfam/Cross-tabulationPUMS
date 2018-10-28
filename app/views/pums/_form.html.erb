@@ -1,0 +1,102 @@
+<%= form_with(model: pum, local: true) do |form| %>
+  <% if pum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pum.errors.count, "error") %> prohibited this pum from being saved:</h2>
+
+      <ul>
+      <% pum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :state_puma %>
+    <%= form.text_field :state_puma %>
+  </div>
+
+  <div class="field">
+    <%= form.label :borough %>
+    <%= form.text_field :borough %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agegroupsd %>
+    <%= form.text_field :agegroupsd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agegroups %>
+    <%= form.text_field :agegroups %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age65plus %>
+    <%= form.text_field :age65plus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age18 %>
+    <%= form.text_field :age18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mutu %>
+    <%= form.text_field :mutu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mutud %>
+    <%= form.text_field :mutud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :educd_recode %>
+    <%= form.text_field :educd_recode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :educd_college %>
+    <%= form.text_field :educd_college %>
+  </div>
+
+  <div class="field">
+    <%= form.label :engability %>
+    <%= form.text_field :engability %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lanx %>
+    <%= form.text_field :lanx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nativity %>
+    <%= form.text_field :nativity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :povertylevel %>
+    <%= form.text_field :povertylevel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :disabilityagegroups %>
+    <%= form.text_field :disabilityagegroups %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classwkr_dcp %>
+    <%= form.text_field :classwkr_dcp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

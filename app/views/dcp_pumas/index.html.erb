@@ -1,5 +1,41 @@
 <h1>DcpPumas#index</h1>
 <p>Find me in app/views/dcp_pumas/index.html.erb</p>
-<% @pumas.each do |puma| %>
-  <%= puma.inspect %>
+
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            #
+          </th>
+          <th>
+            Code
+          </th>
+        </tr>
+      </thead>
+
+    <% items=[] %>
+    <% CSV.foreach('path to csv', headers: true) do |row|%>
+      <% items << Item.new(row.to_h)%>
+      <% end %>
+      <tbody>
+        <% @pumas.each do |puma| %>
+        <tr>
+          <td>
+            <%= puma.code %>
+          </td>
+          <td>
+            <%= puma.name %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 <% end %>

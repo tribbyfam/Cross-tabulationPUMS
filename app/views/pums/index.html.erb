@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State puma</th>
+      <th>Borough</th>
+      <th>Agegroupsd</th>
+      <th>Agegroups</th>
+      <th>Age65plus</th>
+      <th>Age18</th>
+      <th>Mutu</th>
+      <th>Mutud</th>
+      <th>Educd recode</th>
+      <th>Educd college</th>
+      <th>Engability</th>
+      <th>Lanx</th>
+      <th>Nativity</th>
+      <th>Povertylevel</th>
+      <th>Disabilityagegroups</th>
+      <th>Classwkr dcp</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pums.each do |pum| %>
+      <tr>
+        <td><%= pum.state_puma %></td>
+        <td><%= pum.borough %></td>
+        <td><%= pum.agegroupsd %></td>
+        <td><%= pum.agegroups %></td>
+        <td><%= pum.age65plus %></td>
+        <td><%= pum.age18 %></td>
+        <td><%= pum.mutu %></td>
+        <td><%= pum.mutud %></td>
+        <td><%= pum.educd_recode %></td>
+        <td><%= pum.educd_college %></td>
+        <td><%= pum.engability %></td>
+        <td><%= pum.lanx %></td>
+        <td><%= pum.nativity %></td>
+        <td><%= pum.povertylevel %></td>
+        <td><%= pum.disabilityagegroups %></td>
+        <td><%= pum.classwkr_dcp %></td>
+        <td><%= pum.id %></td>
+        <td><%= link_to 'Show', pum %></td>
+        <td><%= link_to 'Edit', edit_pum_path(pum) %></td>
+        <td><%= link_to 'Destroy', pum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pum', new_pum_path %>
