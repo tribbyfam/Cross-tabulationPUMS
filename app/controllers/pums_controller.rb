@@ -61,6 +61,11 @@ class PumsController < ApplicationController
     end
   end
 
+  def import
+    Pum.import(params[:file])
+    redirect_to dcp_pumas_path, notice: "PUMs Added Successfully"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pum
