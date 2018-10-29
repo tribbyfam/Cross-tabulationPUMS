@@ -4,10 +4,11 @@ class Pum < ApplicationRecord
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
 
   def self.import(file)
-    pums = []
+    # pums = []
     CSV.foreach(file.path, headers: true) do |row|
-      pums << Pum.new(row.to_hash)
+      # pums << Pum.new(row.to_hash)
+      Pum.create! row.to_hash
     end
-    Pum.import pums, recursive: true
+    # Pum.import pums, recursive: true
   end
 end
