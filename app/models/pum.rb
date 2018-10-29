@@ -1,5 +1,5 @@
 class Pum < ApplicationRecord
-
+  
   def self.import(file)
     # pums = []
     CSV.foreach(file.path, headers: true) do |row|

@@ -57,5 +57,9 @@ DcpPuma.create(year: '2016', code: '3603901', name: 'SI Community District 3', b
 DcpPuma.create(year: '2016', code: '3603902', name: 'SI Community District 2', boro: 'Staten Island')
 DcpPuma.create(year: '2016', code: '3603903', name: 'SI Community District 1', boro: 'Staten Island')
 
-
+Boro.create(name: "Manhattan")
+Boro.create(name: "Bronx")
+Boro.create(name: "Brooklyn")
+Boro.create(name: "Queens")
+Boro.create(name: "Staten Island")
 
