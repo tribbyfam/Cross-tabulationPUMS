@@ -4,7 +4,7 @@ class CreateDcpPumas < ActiveRecord::Migration[5.2]
       t.string :year
       t.string :code
       t.string :name
-      t.string :boro
+      t.references :boro
 
       t.timestamps
     end

@@ -1,4 +1,4 @@
 class Boro < ApplicationRecord
-  has_many pumas
-  has_many pums
+  has_many :pumas
+  has_many :pums
 end
