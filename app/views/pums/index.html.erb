@@ -1,67 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pums</h1>
+<div class="container">
+  <h1>Pums</h1>
 
-<div class="media">
-  <div class="media-body"> 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>State puma</th>
-          <th>Borough</th>
-          <th>Age groupsd</th>
-          <th>Age groups</th>
-          <th>Age 65plus</th>
-          <th>Age 18</th>
-          <th>Mutu</th>
-          <th>Mutud</th>
-          <th>Education</th>
-          <th>Education college</th>
-          <th>English ability</th>
-          <th>Lanx</th>
-          <th>Nativity</th>
-          <th>Poverty level</th>
-          <th>Disability age groups</th>
-          <th>Class worker</th>
-          <th>Id</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @pums.each do |pum| %>
+  <div class="media">
+    <div class="media-body"> 
+      <table class="table table-hover">
+        <thead>
           <tr>
-            <td><%= pum.state_puma %></td>
-            <td><%= pum.borough %></td>
-            <td><%= pum.agegroupsd %></td>
-            <td><%= pum.agegroups %></td>
-            <td><%= pum.age65plus %></td>
-            <td><%= pum.age18 %></td>
-            <td><%= pum.mutu %></td>
-            <td><%= pum.mutud %></td>
-            <td><%= pum.educd_recode %></td>
-            <td><%= pum.educd_college %></td>
-            <td><%= pum.engability %></td>
-            <td><%= pum.lanx %></td>
-            <td><%= pum.nativity %></td>
-            <td><%= pum.povertylevel %></td>
-            <td><%= pum.disabilityagegroups %></td>
-            <td><%= pum.classwkr_dcp %></td>
-            <td><%= pum.id %></td>
-            <td><%= link_to 'Show', pum %></td>
-            <td><%= link_to 'Edit', edit_pum_path(pum) %></td>
-            <td><%= link_to 'Destroy', pum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th>State puma</th>
+            <th>Borough</th>
+            <th>Age groupsd</th>
+            <th>Age groups</th>
+            <th>Age 65plus</th>
+            <th>Age 18</th>
+            <th>Mutu</th>
+            <th>Mutud</th>
+            <th>Education</th>
+            <th>Education college</th>
+            <th>English ability</th>
+            <th>Lanx</th>
+            <th>Nativity</th>
+            <th>Poverty level</th>
+            <th>Disability age groups</th>
+            <th>Class worker</th>
+            <th>Id</th>
+            <th colspan="3"></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div> 
-</div>  
-<br>
-<h3>Import PUMs</h3>
-   <%= form_tag import_pums_path, multipart: true do %>
-   <%= file_field_tag :file %>
-  <%= submit_tag "Upload PUMs" %>
-  <% end %>
+        </thead>
+
+        <tbody>
+          <% @pums.each do |pum| %>
+            <tr>
+              <td><%= pum.state_puma %></td>
+              <td><%= pum.borough %></td>
+              <td><%= pum.agegroupsd %></td>
+              <td><%= pum.agegroups %></td>
+              <td><%= pum.age65plus %></td>
+              <td><%= pum.age18 %></td>
+              <td><%= pum.mutu %></td>
+              <td><%= pum.mutud %></td>
+              <td><%= pum.educd_recode %></td>
+              <td><%= pum.educd_college %></td>
+              <td><%= pum.engability %></td>
+              <td><%= pum.lanx %></td>
+              <td><%= pum.nativity %></td>
+              <td><%= pum.povertylevel %></td>
+              <td><%= pum.disabilityagegroups %></td>
+              <td><%= pum.classwkr_dcp %></td>
+              <td><%= pum.id %></td>
+              <td><%= link_to 'Show', pum %></td>
+              <td><%= link_to 'Edit', edit_pum_path(pum) %></td>
+              <td><%= link_to 'Destroy', pum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div> 
+  </div>  
+  <br>
+  <h3>Import PUMs</h3>
+    <%= form_tag import_pums_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Upload PUMs" %>
+    <% end %>
+</div>
+
 
 <%= link_to 'New Pum', new_pum_path %>

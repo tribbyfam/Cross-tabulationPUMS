@@ -17,19 +17,15 @@
           </th>
         </tr>
       </thead>
-
-    <% items=[] %>
-    <% CSV.foreach('path to csv', headers: true) do |row|%>
-      <% items << Item.new(row.to_h)%>
-      <% end %>
+   
       <tbody>
-        <% @pumas.each do |puma| %>
+        <% @pums.each do |p| %>
         <tr>
           <td>
-            <%= puma.code %>
+            <%= p.borough %>
           </td>
           <td>
-            <%= puma.name %>
+            <%= p.agegroups %>
           </td>
         </tr>
       </tbody>
