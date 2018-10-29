@@ -1,5 +1,6 @@
 class BorosController < ApplicationController
   def index
+    @boros = Boros.all
   end
 
   def new

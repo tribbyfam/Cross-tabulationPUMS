@@ -1,2 +1,21 @@
 <h1>Boros#index</h1>
 <p>Find me in app/views/boros/index.html.erb</p>
+
+<thead>
+  <tr>
+    <th>Age Groups</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @boros.pums.each do |pum| %>
+    <tr>
+    <%# dummy = [] %>
+    <%# <% pum.agegroups +=  %> %>
+    <%# push %>
+      <td><%= pum.agegroups %></td>
+    </tr>
+    <% end %>
+</tbody>
+
+

@@ -1,5 +1,7 @@
 class Pum < ApplicationRecord
-  
+  belongs_to puma
+  belongs_to boro
+
   def self.import(file)
     # pums = []
     CSV.foreach(file.path, headers: true) do |row|

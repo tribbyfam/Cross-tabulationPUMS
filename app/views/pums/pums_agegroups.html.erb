@@ -1,0 +1,27 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Borough</th>
+    </tr>
+    <tr>
+      <th>Age Groups</th>
+    </tr>
+  </thead>
+
+  <tbody>   
+    <tr>
+    <% @boros.each do |b| %>
+      <td>
+      <%= b.name %>
+      </td>
+      <% end %>
+      <% @pums.each do |pum| %>
+    <%# dummy = [] %>
+    <%# <% pum.agegroups +=  %> 
+    <%# push %>
+      <td><%= pum.agegroups %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

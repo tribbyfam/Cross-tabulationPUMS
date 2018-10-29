@@ -70,6 +70,11 @@ class PumsController < ApplicationController
     redirect_to dcp_pumas_path, notice: "PUMs Added Successfully"
   end
 
+  def pums_agegroups
+    @pums = Pum.all
+    @boros = Boro.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pum
@@ -81,6 +86,5 @@ class PumsController < ApplicationController
       params.require(:pum).permit(:state_puma, :borough, :agegroupsd, :agegroups, :age65plus, :age18, :mutu, :mutud, :educd_recode, :educd_college, :engability, :lanx, :nativity, :povertylevel, :disabilityagegroups, :classwkr_dcp, :id)
     end
 
-    def agegroups
-    end
+    
 end
