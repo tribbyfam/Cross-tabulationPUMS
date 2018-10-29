@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root to: 'static#homepage'
 
   resources :dcp_pumas
+  get 'pums/agegroups', to: 'pums#agegroups'
 
  
   

@@ -1,0 +1,16 @@
+<thead>
+  <tr>
+    <th>Age Groups</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @pums.each do |pum| %>
+    <tr>
+    <%# dummy = [] %>
+    <%# <% pum.agegroups +=  %> %>
+    <%# push %>
+      <td><%= pum.agegroups %></td>
+    </tr>
+    <% end %>
+</tbody>

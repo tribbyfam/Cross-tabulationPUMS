@@ -5,6 +5,10 @@ class PumsController < ApplicationController
   # GET /pums.json
   def index
     @pums = Pum.all
+    if params[:borough]
+      @pums = Pum.where(borough: params[:borough])
+    end
+    
   end
 
   # GET /pums/1
@@ -75,5 +79,8 @@ class PumsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pum_params
       params.require(:pum).permit(:state_puma, :borough, :agegroupsd, :agegroups, :age65plus, :age18, :mutu, :mutud, :educd_recode, :educd_college, :engability, :lanx, :nativity, :povertylevel, :disabilityagegroups, :classwkr_dcp, :id)
+    end
+
+    def agegroups
     end
 end
