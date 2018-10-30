@@ -1,6 +1,6 @@
 
-<table>
-  <thead>
+<table class="container">
+  <thead class="row">
     <tr>
       <th>Borough</th>
     </tr>
@@ -10,13 +10,16 @@
   </thead>
 
   <tbody>   
-    <tr>
+    
     <% @boros.each do |b| %>
+    <tr>
       <td>
       <%= b.name %>
       </td>
+    </tr>
       <% end %>
       <% @pums.each do |pum| %>
+    <tr>
     <%# dummy = [] %>
     <%# <% pum.agegroups +=  %> 
     <%# push %>

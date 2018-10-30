@@ -1,5 +1,5 @@
 class Pum < ApplicationRecord
-  belongs_to :puma
+  belongs_to :dcp_puma
   belongs_to :boro
 
   def self.import(file)

@@ -1,8 +1,8 @@
 class CreatePums < ActiveRecord::Migration[5.2]
   def change
     create_table :pums do |t|
-      t.references :dcp_puma
-      t.references :boro
+      t.string :state_puma
+      t.string :borough
       t.string :agegroupsd
       t.string :agegroups
       t.string :age65plus
@@ -18,6 +18,8 @@ class CreatePums < ActiveRecord::Migration[5.2]
       t.string :disabilityagegroups
       t.string :classwkr_dcp
       t.integer :id_dcp
+      t.references :dcp_puma
+      t.references :boro
 
       t.timestamps
     end

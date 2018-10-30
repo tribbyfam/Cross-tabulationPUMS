@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_192819) do
   end
 
   create_table "pums", force: :cascade do |t|
-    t.bigint "dcp_puma_id"
-    t.bigint "boro_id"
+    t.string "state_puma"
+    t.string "borough"
     t.string "agegroupsd"
     t.string "agegroups"
     t.string "age65plus"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_192819) do
     t.string "disabilityagegroups"
     t.string "classwkr_dcp"
     t.integer "id_dcp"
+    t.bigint "dcp_puma_id"
+    t.bigint "boro_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["boro_id"], name: "index_pums_on_boro_id"
