@@ -23,6 +23,11 @@ h3 {
   font-family: 'Merriweather', serif;
 }
 
+h5 {
+  text-align: center;
+  font-size: 2.2em;
+}
+
 /* Home */
 #home {
   height: 100vh;
