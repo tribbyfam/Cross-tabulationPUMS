@@ -21,9 +21,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_192819) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dcp_pumas", force: :cascade do |t|
+  create_table "dcp_pumas", primary_key: "code", force: :cascade do |t|
     t.string "year"
-    t.string "code"
     t.string "name"
     t.bigint "boro_id"
     t.datetime "created_at", null: false

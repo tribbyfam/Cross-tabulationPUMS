@@ -67,7 +67,7 @@ class PumsController < ApplicationController
 
   def import
     Pum.import(params[:file])
-    redirect_to dcp_pumas_path, notice: "PUMs Added Successfully"
+    redirect_to pums_path, notice: "PUMs Added Successfully"
   end
 
   def pums_agegroups
