@@ -2,6 +2,8 @@ class DcpPumasController < ApplicationController
 
   def index
     @pumas = DcpPuma.all
+    @pums = Pum.all
+    @boros = Boro.all
   end
 
   def new

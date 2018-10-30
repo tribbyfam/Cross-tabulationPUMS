@@ -3,7 +3,9 @@
 <div class="container">
   <h1>Pums</h1>
   <h2><%= @show_data %></h2>
-  <%= link_to "age grps", pums_agegroups_path %>
+  <button><%= link_to "Boro Data", boros_path %></button>
+  <button><%= link_to "PUMA Data", dcp_pumas_path %></button>
+  <button><%= link_to "age grps", pums_agegroups_path %></button>
 
   <div class="media">
     <div class="media-body"> 
@@ -26,7 +28,9 @@
             <th>Poverty level</th>
             <th>Disability age groups</th>
             <th>Class worker</th>
-            <th>Id</th>
+            <th>Pumas</th>
+            <th>Boros</th>
+            <th>DCP Id</th>
             <th colspan="3"></th>
           </tr>
         </thead>

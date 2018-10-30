@@ -1,37 +1,48 @@
 <h1>DcpPumas#index</h1>
 <p>Find me in app/views/dcp_pumas/index.html.erb</p>
 
-<div class="media">
-  <div class="media-body">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>
-            Name
-          </th>
-          <th>
-            #
-          </th>
-          <th>
-            Code
-          </th>
-        </tr>
-      </thead>
-   
-      <tbody>
-        <% @pums.each do |p| %>
-        <tr>
-          <td>
-            <%= p.borough %>
-          </td>
-          <td>
-            <%= p.agegroups %>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+  <div>
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Age Groups</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nativity</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Age 65 years</a>
+        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Age 18 years</a>
+      </div>
+    </div>
   </div>
-</div>
 
+  <div class="container">
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="thead-dark">
+                Borough Name
+              </th>
+              <th scope="col" class="thead-dark">
+                Population under 65 years
+              </th>
+              <th scope="col" class="thead-dark">
+                Population over 65 years
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+        <% @boros.each do |b| %>
+          <tr>
+            <td><%= b.name %></td>
+            <td><%= @pums.group(:borough).count %></td>
+           
+            <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </div>
+    </div>
 
-<% end %>
+  
