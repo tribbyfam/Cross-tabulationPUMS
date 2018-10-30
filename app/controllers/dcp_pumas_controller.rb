@@ -1,9 +1,8 @@
 class DcpPumasController < ApplicationController
 
   def index
+    @pums = Pum.all 
     @pumas = DcpPuma.all
-    @pums = Pum.all
-    @boros = Boro.all
   end
 
   def new
@@ -22,5 +21,11 @@ class DcpPumasController < ApplicationController
   end
 
   def destroy
+  end
+
+  def dcp_pumas_nativity
+    @pumas = Puma.all
+    @pums = Pum.all
+    @boros = Boro.all
   end
 end

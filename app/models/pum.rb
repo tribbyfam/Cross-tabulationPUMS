@@ -15,10 +15,12 @@ class Pum < ApplicationRecord
   scope :qn, -> { where borough: '4' }
   scope :si, -> { where borough: '5' }
 
+  scope :native, -> { where nativity: '1' }
+  scope :foreign, -> { where nativity: '2' }
+
   def self.import(file)
     # pums = []
     CSV.foreach(file.path, headers: true) do |row|
-      p row
       # pums << Pum.new(row.to_hash)
       Pum.create! row.to_hash
     end

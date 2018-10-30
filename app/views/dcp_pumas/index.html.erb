@@ -1,15 +1,6 @@
 <h5>Borough Data</h5>
-  <div>
-    <div class="col-2">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Age Groups</a>
-        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nativity</a>
-        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Age 65 years</a>
-        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Age 18 years</a>
-      </div>
-    </div>
-  </div>
 
+  <%= render 'shared/nav' %>
   <div>
     <div class="col-9 table media">
       <div class="media-body">
@@ -43,53 +34,40 @@
         </div>
         <tbody>
           <tr>
-            <td>Manhattan</td>
-            <td><%= @pums.mn.under_18.count %></td>
-            <td><%= @pums.mn.yr18_24.count %></td>
-            <td><%= @pums.mn.yr25_34.count %></td>
-            <td><%= @pums.mn.yr35_44.count %></td>
-            <td><%= @pums.mn.yr45_64.count %></td>
-            <td><%= @pums.mn.over_65.count %></td>
+          
+            <% @pumas.each do |puma| %>
+
+            <td> <%= puma.name %> </td>
+            <td>
+            <%= puma.pums.where(agegroups: '1').length
+            %></td>
+             <td>
+            <%= puma.pums.where(agegroups: '2').length
+            %></td>
+             <td>
+            <%= puma.pums.where(agegroups: '3').length
+            %></td>
+             <td>
+            <%= puma.pums.where(agegroups: '4').length
+            %></td>
+             <td>
+            <%= puma.pums.where(agegroups: '5').length
+            %></td>
+             <td>
+            <%= puma.pums.where(agegroups: '6').length
+            %></td>
+            <%# <td><%= @pums.code.count %></td> %>
+            <%# <td><%= @pums.code.yr18_24.count %></td> %>
+            <%# <td><%= @pums.code.yr25_34.count %></td> %>
+            <%# <td><%= @pums.code.yr35_44.count %></td> %>
+            <%# <td><%= @pums.code.yr45_64.count %></td> %>
+            <%# <td><%= @pums.code.over_65.count</td> %> %>
+          </tr>
+            <% end %>
             <%# <td><%= @pums.group(:borough).count %></td> %>
-          </tr>
-          <tr>
-            <td>Bronx</td>
-            <td><%= @pums.bx.under_18.count %></td>
-            <td><%= @pums.bx.yr18_24.count %></td>
-            <td><%= @pums.bx.yr25_34.count %></td>
-            <td><%= @pums.bx.yr35_44.count %></td>
-            <td><%= @pums.bx.yr45_64.count %></td>
-            <td><%= @pums.bx.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Brooklyn</td>
-            <td><%= @pums.bk.under_18.count %></td>
-            <td><%= @pums.bk.yr18_24.count %></td>
-            <td><%= @pums.bk.yr25_34.count %></td>
-            <td><%= @pums.bk.yr35_44.count %></td>
-            <td><%= @pums.bk.yr45_64.count %></td>
-            <td><%= @pums.bk.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Queens</td>
-            <td><%= @pums.qn.under_18.count %></td>
-            <td><%= @pums.qn.yr18_24.count %></td>
-            <td><%= @pums.qn.yr25_34.count %></td>
-            <td><%= @pums.qn.yr35_44.count %></td>
-            <td><%= @pums.qn.yr45_64.count %></td>
-            <td><%= @pums.qn.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Staten Island</td>
-            <td><%= @pums.si.under_18.count %></td>
-            <td><%= @pums.si.yr18_24.count %></td>
-            <td><%= @pums.si.yr25_34.count %></td>
-            <td><%= @pums.si.yr35_44.count %></td>
-            <td><%= @pums.si.yr45_64.count %></td>
-            <td><%= @pums.si.over_65.count %></td>
-          </tr>
+         
+          
             <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %>
-          </tr>
         </tbody>
        
       </div>

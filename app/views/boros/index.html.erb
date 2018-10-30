@@ -1,21 +1,91 @@
-<h1>Boros#index</h1>
-<p>Find me in app/views/boros/index.html.erb</p>
 
-<thead>
-  <tr>
-    <th>Age Groups</th>
-  </tr>
-</thead>
+<h5>Borough Data</h5>
 
-<tbody>
-  <% @boros.pums.each do |pum| %>
-    <tr>
-    <%# dummy = [] %>
-    <%# <% pum.agegroups +=  %> %>
-    <%# push %>
-      <td><%= pum.agegroups %></td>
-    </tr>
-    <% end %>
-</tbody>
+  <%= render 'shared/nav' %>
+  <div>
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="thead-dark">
+                Borough Name
+              </th>
+              <th scope="col" class="thead-dark">
+                Under 18yrs
+              </th>
+              <th scope="col" class="thead-dark">
+                18 to 24yrs
+              </th>
+              <th scope="col" class="thead-dark">
+                25 to 34yrs
+              </th>
+              <th scope="col" class="thead-dark">
+                35 to 44yrs
+              </th>
+              <th scope="col" class="thead-dark">
+                45 to 64yrs
+              </th>
+              <th scope="col" class="thead-dark">
+                Over 65yrs
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+          <tr>
+            <td>Manhattan</td>
+            <td><%= @pums.mn.under_18.count %></td>
+            <td><%= @pums.mn.yr18_24.count %></td>
+            <td><%= @pums.mn.yr25_34.count %></td>
+            <td><%= @pums.mn.yr35_44.count %></td>
+            <td><%= @pums.mn.yr45_64.count %></td>
+            <td><%= @pums.mn.over_65.count %></td>
+            <%# <td><%= @pums.group(:borough).count %></td> %>
+          </tr>
+          <tr>
+            <td>Bronx</td>
+            <td><%= @pums.bx.under_18.count %></td>
+            <td><%= @pums.bx.yr18_24.count %></td>
+            <td><%= @pums.bx.yr25_34.count %></td>
+            <td><%= @pums.bx.yr35_44.count %></td>
+            <td><%= @pums.bx.yr45_64.count %></td>
+            <td><%= @pums.bx.over_65.count %></td>
+          </tr>
+          <tr>
+            <td>Brooklyn</td>
+            <td><%= @pums.bk.under_18.count %></td>
+            <td><%= @pums.bk.yr18_24.count %></td>
+            <td><%= @pums.bk.yr25_34.count %></td>
+            <td><%= @pums.bk.yr35_44.count %></td>
+            <td><%= @pums.bk.yr45_64.count %></td>
+            <td><%= @pums.bk.over_65.count %></td>
+          </tr>
+          <tr>
+            <td>Queens</td>
+            <td><%= @pums.qn.under_18.count %></td>
+            <td><%= @pums.qn.yr18_24.count %></td>
+            <td><%= @pums.qn.yr25_34.count %></td>
+            <td><%= @pums.qn.yr35_44.count %></td>
+            <td><%= @pums.qn.yr45_64.count %></td>
+            <td><%= @pums.qn.over_65.count %></td>
+          </tr>
+          <tr>
+            <td>Staten Island</td>
+            <td><%= @pums.si.under_18.count %></td>
+            <td><%= @pums.si.yr18_24.count %></td>
+            <td><%= @pums.si.yr25_34.count %></td>
+            <td><%= @pums.si.yr35_44.count %></td>
+            <td><%= @pums.si.yr45_64.count %></td>
+            <td><%= @pums.si.over_65.count %></td>
+          </tr>
+            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %>
+          </tr>
+        </tbody>
+       
+      </div>
+    </div>
+
 
 
