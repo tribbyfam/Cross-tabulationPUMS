@@ -5,19 +5,19 @@
   
   
   <div id="content">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid col-md-2 offset-md-5">
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <nav class="navbar navbar-expand-lg toggle-div">
+      <div class="container-fluid col-md-2 offset-md-3">
+        <button type="button" id="sidebarCollapse" class="btn btn-info toggle">
           <i class="fas fa-align-left"></i>
-          <span>Toggle Sidebar</span>
+          <span>Toggle Bar</span>
         </button>
       </div>
     </nav>
   </div>
 
   <div>
-    <div class="col-md-9 offset-md-3 table media">
-      <div class="media-body">
+    <div class="offset-md-3 table">
+      <div>
         <table class="table table-hover display" id="table_id">
           <thead class="tab-content" id="v-pills-tabContent">
             <tr>
@@ -44,63 +44,57 @@
               </th>
             </tr>
           </thead>
-        <thead>
-        </div>
-        <tbody>
-          <tr>
-            <td>Manhattan</td>
-            <td class="tbl"><%= @pums.mn.under_18.count %></td>
-            <td class="tbl"><%= @pums.mn.yr18_24.count %></td>
-            <td class="tbl"><%= @pums.mn.yr25_34.count %></td>
-            <td class="tbl"><%= @pums.mn.yr35_44.count %></td>
-            <td class="tbl"><%= @pums.mn.yr45_64.count %></td>
-            <td class="tbl"><%= @pums.mn.over_65.count %></td>
-            <%# <td><%= @pums.group(:borough).count %></td> %>
-          </tr>
-          <tr>
-            <td>Bronx</td>
-            <td class="tbl"><%= @pums.bx.under_18.count %></td>
-            <td class="tbl"><%= @pums.bx.yr18_24.count %></td>
-            <td class="tbl"><%= @pums.bx.yr25_34.count %></td>
-            <td class="tbl"><%= @pums.bx.yr35_44.count %></td>
-            <td class="tbl"><%= @pums.bx.yr45_64.count %></td>
-            <td class="tbl"><%= @pums.bx.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Brooklyn</td>
-            <td class="tbl"><%= @pums.bk.under_18.count %></td>
-            <td class="tbl"><%= @pums.bk.yr18_24.count %></td>
-            <td class="tbl"><%= @pums.bk.yr25_34.count %></td>
-            <td class="tbl"><%= @pums.bk.yr35_44.count %></td>
-            <td class="tbl"><%= @pums.bk.yr45_64.count %></td>
-            <td class="tbl"><%= @pums.bk.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Queens</td>
-            <td class="tbl"><%= @pums.qn.under_18.count %></td>
-            <td class="tbl"><%= @pums.qn.yr18_24.count %></td>
-            <td class="tbl"><%= @pums.qn.yr25_34.count %></td>
-            <td class="tbl"><%= @pums.qn.yr35_44.count %></td>
-            <td class="tbl"><%= @pums.qn.yr45_64.count %></td>
-            <td class="tbl"><%= @pums.qn.over_65.count %></td>
-          </tr>
-          <tr>
-            <td>Staten Island</td>
-            <td class="tbl"><%= @pums.si.under_18.count %></td>
-            <td class="tbl"><%= @pums.si.yr18_24.count %></td>
-            <td class="tbl"><%= @pums.si.yr25_34.count %></td>
-            <td class="tbl"><%= @pums.si.yr35_44.count %></td>
-            <td class="tbl"><%= @pums.si.yr45_64.count %></td>
-            <td class="tbl"><%= @pums.si.over_65.count %></td>
-            
-          </tr>
-          <tr>
-            <td>Total: <strong><%= @pums.count(:agegroups) %></strong> </td>
-            
-          </tr>
-        
-        </tbody>
-      
+          <tbody>
+            <tr>
+              <td>Manhattan</td>
+              <td class="tbl"><%= @pums.mn.under_18.count %></td>
+              <td class="tbl"><%= @pums.mn.yr18_24.count %></td>
+              <td class="tbl"><%= @pums.mn.yr25_34.count %></td>
+              <td class="tbl"><%= @pums.mn.yr35_44.count %></td>
+              <td class="tbl"><%= @pums.mn.yr45_64.count %></td>
+              <td class="tbl"><%= @pums.mn.over_65.count %></td>              
+            </tr>
+            <tr>
+              <td>Bronx</td>
+              <td class="tbl"><%= @pums.bx.under_18.count %></td>
+              <td class="tbl"><%= @pums.bx.yr18_24.count %></td>
+              <td class="tbl"><%= @pums.bx.yr25_34.count %></td>
+              <td class="tbl"><%= @pums.bx.yr35_44.count %></td>
+              <td class="tbl"><%= @pums.bx.yr45_64.count %></td>
+              <td class="tbl"><%= @pums.bx.over_65.count %></td>
+            </tr>
+            <tr>
+              <td>Brooklyn</td>
+              <td class="tbl"><%= @pums.bk.under_18.count %></td>
+              <td class="tbl"><%= @pums.bk.yr18_24.count %></td>
+              <td class="tbl"><%= @pums.bk.yr25_34.count %></td>
+              <td class="tbl"><%= @pums.bk.yr35_44.count %></td>
+              <td class="tbl"><%= @pums.bk.yr45_64.count %></td>
+              <td class="tbl"><%= @pums.bk.over_65.count %></td>
+            </tr>
+            <tr>
+              <td>Queens</td>
+              <td class="tbl"><%= @pums.qn.under_18.count %></td>
+              <td class="tbl"><%= @pums.qn.yr18_24.count %></td>
+              <td class="tbl"><%= @pums.qn.yr25_34.count %></td>
+              <td class="tbl"><%= @pums.qn.yr35_44.count %></td>
+              <td class="tbl"><%= @pums.qn.yr45_64.count %></td>
+              <td class="tbl"><%= @pums.qn.over_65.count %></td>
+            </tr>
+            <tr>
+              <td>Staten Island</td>
+              <td class="tbl"><%= @pums.si.under_18.count %></td>
+              <td class="tbl"><%= @pums.si.yr18_24.count %></td>
+              <td class="tbl"><%= @pums.si.yr25_34.count %></td>
+              <td class="tbl"><%= @pums.si.yr35_44.count %></td>
+              <td class="tbl"><%= @pums.si.yr45_64.count %></td>
+              <td class="tbl"><%= @pums.si.over_65.count %></td>             
+            </tr>
+            <tr>
+              <td>Total: <strong><%= @pums.count(:agegroups) %></strong> </td>              
+            </tr>          
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

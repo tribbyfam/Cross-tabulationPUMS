@@ -1,11 +1,24 @@
+
 <h5>Borough Data</h5>
 
   <%= render 'shared/nav_boro' %>
+   
+    <div id="content">
+    <nav class="navbar navbar-expand-lg toggle-div">
+      <div class="container-fluid col-md-2 offset-md-2">
+        <button type="button" id="sidebarCollapse" class="btn btn-info toggle">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Bar</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
   <div>
-    <div class="col-9 table media">
+    <div class="offset-md-8 table media">
       <div class="media-body">
-        <table class="table table-hover">
-          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+        <table class="table table-hover display" id="table_id">
+          <thead class="tab-content" id="v-pills-tabContent">
             <tr>
               <th scope="col" class="table-h1">
                 Borough Name
@@ -17,42 +30,43 @@
                 Age under 65 years
               </th>
             </tr>
-          </thead>
-        <thead>
-        </div>
-        <tbody>
-          <tr>
-            <td>Manhattan</td>
-            <td class="tbl"><%= @pums.mn.over_65.count %></td>
-            <td class="tbl"><%= @pums.mn.under_65.count %></td>
-          </tr>
-          <tr>
-            <td>Bronx</td>
-            <td class="tbl"><%= @pums.bx.over_65.count %></td>
-            <td class="tbl"><%= @pums.bx.under_65.count %></td>
-           
-          </tr>
-          <tr>
-            <td>Brooklyn</td>
-            <td class="tbl"><%= @pums.bk.over_65.count %></td>
-            <td class="tbl"><%= @pums.bk.under_65.count %></td>
-           
-          </tr>
-          <tr>
-            <td>Queens</td>
-            <td class="tbl"><%= @pums.qn.over_65.count %></td>
-            <td class="tbl"><%= @pums.qn.under_65.count %></td>
+          </thead>     
+          <tbody>
+            <tr>
+              <td>Manhattan</td>
+              <td class="tbl"><%= @pums.mn.over_65.count %></td>
+              <td class="tbl"><%= @pums.mn.under_65.count %></td>
+            </tr>
+            <tr>
+              <td>Bronx</td>
+              <td class="tbl"><%= @pums.bx.over_65.count %></td>
+              <td class="tbl"><%= @pums.bx.under_65.count %></td>
             
-          </tr>
-          <tr>
-            <td>Staten Island</td>
-            <td class="tbl"><%= @pums.si.over_65.count %></td>
-            <td class="tbl"><%= @pums.si.under_65.count %></td>     
-          </tr>
-          <tr>
-            <td>Total: <%= @pums.count(:age65plus) %></td>
-          </tr>
-        </tbody>
-       
+            </tr>
+            <tr>
+              <td>Brooklyn</td>
+              <td class="tbl"><%= @pums.bk.over_65.count %></td>
+              <td class="tbl"><%= @pums.bk.under_65.count %></td>
+            
+            </tr>
+            <tr>
+              <td>Queens</td>
+              <td class="tbl"><%= @pums.qn.over_65.count %></td>
+              <td class="tbl"><%= @pums.qn.under_65.count %></td>
+              
+            </tr>
+            <tr>
+              <td>Staten Island</td>
+              <td class="tbl"><%= @pums.si.over_65.count %></td>
+              <td class="tbl"><%= @pums.si.under_65.count %></td>     
+            </tr>
+            <tr>
+              <td>Total: <%= @pums.count(:age65plus) %></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
+</div>
+
