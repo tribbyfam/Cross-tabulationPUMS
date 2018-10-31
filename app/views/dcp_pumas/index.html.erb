@@ -1,14 +1,26 @@
 <h5>Community District Data</h5>
 
   <%= render 'shared/nav_boro' %>
+
+  <div id="content">
+    <nav class="navbar navbar-expand-lg toggle-div">
+      <div class="container-fluid col-md-2 offset-md-3">
+        <button type="button" id="sidebarCollapse" class="btn btn-info toggle">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Bar</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
   <div>
-    <div class="col-9 table media">
-      <div class="media-body">
+    <div class="col-12 offset-3">
+      <div>
         <table class="table table-hover">
-          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+          <thead class="tab-content" id="v-pills-tabContent">
             <tr>
               <th scope="col" class="table-h1">
-                Borough Name
+                Community Districts
               </th>
               <th scope="col" class="table-h2">
                 Under 18yrs
@@ -30,45 +42,39 @@
               </th>
             </tr>
           </thead>
-        <thead>
-        </div>
-        <tbody>
-          <tr>
-          
-            <% @pumas.each do |puma| %>
+          <tbody>
+            <tr>
+            
+              <% @pumas.each do |puma| %>
 
-            <td class="tbl"> <%= puma.name %> </td>
-            <td class="tbl">
-            <%= puma.pums.where(agegroups: '1').length
-            %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '2').length
-            %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '3').length
-            %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '4').length
-            %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '5').length
-            %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '6').length
-            %></td>
-          </tr>
-          <tr>
-            <td>Total: <%= puma.pums.count(:agegroups)%></td> 
-          </tr>
-            <% end %>
+              <td> <%= puma.name %> </td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '1').length
+              %></td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '2').length
+              %></td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '3').length
+              %></td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '4').length
+              %></td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '5').length
+              %></td>
+              <td class="tbl">
+              <%= puma.pums.where(agegroups: '6').length
+              %></td>
+            </tr>
+            <tr>
+              <td>Total: <%= puma.pums.count(:agegroups)%></td> 
+            </tr>
+              <% end %>
           
-            <%# <td><%= @pums.group(:borough).count %></td> %>
-         
-          
-            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %>
-        </tbody>
-       
+          </tbody>
+        </table>
       </div>
     </div>
-
+  </div>
   
