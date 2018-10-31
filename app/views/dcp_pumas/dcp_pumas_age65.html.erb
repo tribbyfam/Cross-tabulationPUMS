@@ -1,0 +1,40 @@
+<h5>Community District Data</h5>
+
+  <%= render 'shared/nav' %>
+  <div>
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="thead-dark">
+                Borough Name
+              </th>
+              <th scope="col" class="thead-dark">
+                Age over 65 years
+              </th>
+              <th scope="col" class="thead-dark">
+                Age under 65 years
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+          <tr>
+            <% @pumas.each do |puma| %>
+
+            <td> <%= puma.name %> </td>
+            <td>
+            <%= puma.pums.where(age65plus: '1').length
+            %></td>
+            <td><%= puma.pums.where(age65plus: '2').length
+            %></td>
+          </tr>
+            <td>Total: <%= puma.pums.count(:age65plus) %> </td>
+          </tr>
+           <% end %>
+        </tbody>
+       
+      </div>
+    </div>

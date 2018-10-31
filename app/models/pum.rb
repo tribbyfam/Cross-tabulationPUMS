@@ -18,6 +18,9 @@ class Pum < ApplicationRecord
   scope :native, -> { where nativity: '1' }
   scope :foreign, -> { where nativity: '2' }
 
+  scope :over_65, -> { where age65plus: '1' }
+  scope :under_65, -> { where age65plus: '2' }
+
   def self.import(file)
     # pums = []
     CSV.foreach(file.path, headers: true) do |row|

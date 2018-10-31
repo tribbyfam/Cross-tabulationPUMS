@@ -1,0 +1,58 @@
+<h5>Borough Data</h5>
+
+  <%= render 'shared/nav_boro' %>
+  <div>
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="thead-dark table-h">
+                Borough Name
+              </th>
+              <th scope="col" class="thead-dark">
+                Age over 65 years
+              </th>
+              <th scope="col" class="thead-dark">
+                Age under 65 years
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+          <tr>
+            <td>Manhattan</td>
+            <td><%= @pums.mn.over_65.count %></td>
+            <td><%= @pums.mn.under_65.count %></td>
+          </tr>
+          <tr>
+            <td>Bronx</td>
+            <td><%= @pums.bx.over_65.count %></td>
+            <td><%= @pums.bx.under_65.count %></td>
+           
+          </tr>
+          <tr>
+            <td>Brooklyn</td>
+            <td><%= @pums.bk.over_65.count %></td>
+            <td><%= @pums.bk.under_65.count %></td>
+           
+          </tr>
+          <tr>
+            <td>Queens</td>
+            <td><%= @pums.qn.over_65.count %></td>
+            <td><%= @pums.qn.under_65.count %></td>
+            
+          </tr>
+          <tr>
+            <td>Staten Island</td>
+            <td><%= @pums.si.over_65.count %></td>
+            <td><%= @pums.si.under_65.count %></td>     
+          </tr>
+          <tr>
+            <td>Total: <%= @pums.count(:age65plus) %></td>
+          </tr>
+        </tbody>
+       
+      </div>
+    </div>

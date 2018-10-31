@@ -28,4 +28,10 @@ class DcpPumasController < ApplicationController
     @pums = Pum.all
     @boros = Boro.all
   end
+
+  def dcp_pumas_age65
+    @pumas = DcpPuma.all
+    @pums = Pum.all
+    @boros = Boro.all
+  end
 end
