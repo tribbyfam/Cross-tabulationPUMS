@@ -1,0 +1,58 @@
+<h5>Community District Data</h5>
+
+  <%= render 'shared/nav' %>
+  <div>
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="thead-dark">
+                Borough Name
+              </th>
+              <th scope="col" class="thead-dark">
+                Native
+              </th>
+              <th scope="col" class="thead-dark">
+                Foreign born
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+          <tr>
+            <td>Manhattan</td>
+            <td><%= @pums.mn.native.count %></td>
+            <td><%= @pums.mn.foreign.count %></td>
+          </tr>
+          <tr>
+            <td>Bronx</td>
+            <td><%= @pums.bx.native.count %></td>
+            <td><%= @pums.bx.foreign.count %></td>
+           
+          </tr>
+          <tr>
+            <td>Brooklyn</td>
+            <td><%= @pums.bk.native.count %></td>
+            <td><%= @pums.bk.foreign.count %></td>
+           
+          </tr>
+          <tr>
+            <td>Queens</td>
+            <td><%= @pums.qn.native.count %></td>
+            <td><%= @pums.qn.foreign.count %></td>
+            
+          </tr>
+          <tr>
+            <td>Staten Island</td>
+            <td><%= @pums.si.native.count %></td>
+            <td><%= @pums.si.foreign.count %></td>
+            
+          </tr>
+            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :nativity).count %>
+          </tr>
+        </tbody>
+       
+      </div>
+    </div>

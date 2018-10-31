@@ -24,7 +24,7 @@ class DcpPumasController < ApplicationController
   end
 
   def dcp_pumas_nativity
-    @pumas = Puma.all
+    @pumas = DcpPuma.all
     @pums = Pum.all
     @boros = Boro.all
   end

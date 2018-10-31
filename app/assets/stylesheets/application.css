@@ -82,3 +82,9 @@ h5 {
   background-color: #079e99;
   color: #07211f;
 }
+
+/* Tables */
+.table-h {
+  background-color: #0156a0;
+  text-align: left;
+}

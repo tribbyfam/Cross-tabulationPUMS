@@ -79,9 +79,13 @@
             <td><%= @pums.si.yr35_44.count %></td>
             <td><%= @pums.si.yr45_64.count %></td>
             <td><%= @pums.si.over_65.count %></td>
+            
           </tr>
-            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %>
+          <tr>
+            <td>Total: <strong><%= @pums.count(:agegroups) %></strong> </td>
+            
           </tr>
+        
         </tbody>
        
       </div>

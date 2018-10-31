@@ -1,4 +1,4 @@
-<h5>Borough Data</h5>
+<h5>Community District Data</h5>
 
   <%= render 'shared/nav' %>
   <div>
@@ -56,14 +56,12 @@
              <td>
             <%= puma.pums.where(agegroups: '6').length
             %></td>
-            <%# <td><%= @pums.code.count %></td> %>
-            <%# <td><%= @pums.code.yr18_24.count %></td> %>
-            <%# <td><%= @pums.code.yr25_34.count %></td> %>
-            <%# <td><%= @pums.code.yr35_44.count %></td> %>
-            <%# <td><%= @pums.code.yr45_64.count %></td> %>
-            <%# <td><%= @pums.code.over_65.count</td> %> %>
+          </tr>
+          <tr>
+            <td>Total: <%= puma.pums.count(:agegroups)%></td> 
           </tr>
             <% end %>
+          
             <%# <td><%= @pums.group(:borough).count %></td> %>
          
           

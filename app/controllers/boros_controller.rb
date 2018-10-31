@@ -21,4 +21,9 @@ class BorosController < ApplicationController
 
   def destroy
   end
+
+  def boros_nativity
+    @boros = Boro.all
+    @pums = Pum.all
+  end
 end
