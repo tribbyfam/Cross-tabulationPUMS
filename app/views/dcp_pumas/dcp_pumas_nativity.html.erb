@@ -22,36 +22,18 @@
         </div>
         <tbody>
           <tr>
-            <td>Manhattan</td>
-            <td><%= @pums.mn.native.count %></td>
-            <td><%= @pums.mn.foreign.count %></td>
+            <% @pumas.each do |puma| %>
+
+            <td> <%= puma.name %> </td>
+            <td>
+            <%= puma.pums.where(nativity: '1').length
+            %></td>
+            <td><%= puma.pums.where(nativity: '2').length
+            %></td>
           </tr>
-          <tr>
-            <td>Bronx</td>
-            <td><%= @pums.bx.native.count %></td>
-            <td><%= @pums.bx.foreign.count %></td>
-           
+            <td>Total: <%= puma.pums.count(:nativity) %> </td>
           </tr>
-          <tr>
-            <td>Brooklyn</td>
-            <td><%= @pums.bk.native.count %></td>
-            <td><%= @pums.bk.foreign.count %></td>
-           
-          </tr>
-          <tr>
-            <td>Queens</td>
-            <td><%= @pums.qn.native.count %></td>
-            <td><%= @pums.qn.foreign.count %></td>
-            
-          </tr>
-          <tr>
-            <td>Staten Island</td>
-            <td><%= @pums.si.native.count %></td>
-            <td><%= @pums.si.foreign.count %></td>
-            
-          </tr>
-            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :nativity).count %>
-          </tr>
+           <% end %>
         </tbody>
        
       </div>
