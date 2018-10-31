@@ -2,11 +2,24 @@
 <h5>Borough Data</h5>
 
   <%= render 'shared/nav_boro' %>
+  
+  
+  <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid col-md-2 offset-md-5">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Toggle Sidebar</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
   <div>
-    <div class="col-9 table media">
+    <div class="col-md-9 offset-md-3 table media">
       <div class="media-body">
-        <table class="table table-hover">
-          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+        <table class="table table-hover display" id="table_id">
+          <thead class="tab-content" id="v-pills-tabContent">
             <tr>
               <th scope="col" class="table-h1">
                 Borough Name
@@ -87,9 +100,9 @@
           </tr>
         
         </tbody>
-       
+      
       </div>
     </div>
-
-
+  </div>
+</div> 
 

@@ -63,7 +63,7 @@ h5 {
 }
 
 .btn-general {
-  border-color: #fff;
+  border-color: #d0d2d8;
   border-width: 2px;
   border-radius: 0;
   padding: 12px 26px 12px 26px;
@@ -73,25 +73,55 @@ h5 {
 }
 
 .btn-green {
-  border-color: #fff;
-  color: #fff;
+  border-color: #d0d2d8;
+  color: #d0d2d8;
 }
 
 .btn-green:hover,
 .btn-green:focus {
-  background-color: #079e99;
-  color: #07211f;
+  background-color: #0E183F;
+  color: #d0d2d8;
+}
+
+/* Navigation */
+.nav-style {
+
+  color: black;
+}
+
+.nav-style:active {
+  background-color: #0E183F;
+  color: #d0d2d8;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #0E183F;
+  color: #d0d2d8;
+  transition: all 0.3s;
 }
 
 /* Tables */
 .table-h1 {
-  background-color: #0156a0;
+  background-color: #0E183F;
   text-align: left;
+  color: #d0d2d8;
 }
 
 .table-h2 {
-  background-color: #0156a0;
+  background-color: #0E183F;
   text-align: right;
+  color: #d0d2d8;
 }
 
 .tbl {

@@ -1,16 +1,49 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2">
-      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <%= link_to "", boros_path, :class => 'text-white' %><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Age Groups</a>
 
-        <%= link_to "", boros_nativity_path, :class => 'text-white' %><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="dcp_pumas_nativity_path" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nativity</a>
 
-        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Age 65 years</a>
-
-        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Age 18 years</a>
+    <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Sidebar</h3>
       </div>
-    </div>
-  </div>
-</div>
 
+      <ul class="list-unstyled components">
+        <p>Choose Category</p>
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Borough Data</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a><%= link_to "Age Groups", boros_path, :class => 'text-white' %></a>
+              </li>
+              <li>
+                <a><%= link_to "Nativity", boros_nativity_path, :class => 'text-white' %></a>
+              </li>
+              <li>
+                <a><%= link_to "Age 65", boros_age65_path, :class => 'text-white' %></a>
+              </li>
+                <li>
+                <a><%= link_to "Race", boros_mutu_path, :class => 'text-white' %></a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comm Districts</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                  <a><%= link_to "Age Groups", dcp_pumas_path, :class => 'text-white' %></a>
+              </li>
+              <li>
+                  <a><%= link_to "Nativity", dcp_pumas_nativity_path, :class => 'text-white' %></a>
+              </li>
+              <li>
+                  <a><%= link_to "Age 65", dcp_pumas_age65_path, :class => 'text-white' %></a>
+              </li>
+                <li>
+                  <a><%= link_to "Race", dcp_pumas_mutu_path, :class => 'text-white' %></a>
+              </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+   
