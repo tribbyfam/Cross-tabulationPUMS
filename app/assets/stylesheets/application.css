@@ -84,7 +84,16 @@ h5 {
 }
 
 /* Tables */
-.table-h {
+.table-h1 {
   background-color: #0156a0;
   text-align: left;
+}
+
+.table-h2 {
+  background-color: #0156a0;
+  text-align: right;
+}
+
+.tbl {
+  text-align: right;
 }

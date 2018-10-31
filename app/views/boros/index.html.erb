@@ -8,25 +8,25 @@
         <table class="table table-hover">
           <thead class="tab-content thead-dark" id="v-pills-tabContent">
             <tr>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h1">
                 Borough Name
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 Under 18yrs
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 18 to 24yrs
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 25 to 34yrs
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 35 to 44yrs
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 45 to 64yrs
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 Over 65yrs
               </th>
             </tr>
@@ -36,49 +36,49 @@
         <tbody>
           <tr>
             <td>Manhattan</td>
-            <td><%= @pums.mn.under_18.count %></td>
-            <td><%= @pums.mn.yr18_24.count %></td>
-            <td><%= @pums.mn.yr25_34.count %></td>
-            <td><%= @pums.mn.yr35_44.count %></td>
-            <td><%= @pums.mn.yr45_64.count %></td>
-            <td><%= @pums.mn.over_65.count %></td>
+            <td class="tbl"><%= @pums.mn.under_18.count %></td>
+            <td class="tbl"><%= @pums.mn.yr18_24.count %></td>
+            <td class="tbl"><%= @pums.mn.yr25_34.count %></td>
+            <td class="tbl"><%= @pums.mn.yr35_44.count %></td>
+            <td class="tbl"><%= @pums.mn.yr45_64.count %></td>
+            <td class="tbl"><%= @pums.mn.over_65.count %></td>
             <%# <td><%= @pums.group(:borough).count %></td> %>
           </tr>
           <tr>
             <td>Bronx</td>
-            <td><%= @pums.bx.under_18.count %></td>
-            <td><%= @pums.bx.yr18_24.count %></td>
-            <td><%= @pums.bx.yr25_34.count %></td>
-            <td><%= @pums.bx.yr35_44.count %></td>
-            <td><%= @pums.bx.yr45_64.count %></td>
-            <td><%= @pums.bx.over_65.count %></td>
+            <td class="tbl"><%= @pums.bx.under_18.count %></td>
+            <td class="tbl"><%= @pums.bx.yr18_24.count %></td>
+            <td class="tbl"><%= @pums.bx.yr25_34.count %></td>
+            <td class="tbl"><%= @pums.bx.yr35_44.count %></td>
+            <td class="tbl"><%= @pums.bx.yr45_64.count %></td>
+            <td class="tbl"><%= @pums.bx.over_65.count %></td>
           </tr>
           <tr>
             <td>Brooklyn</td>
-            <td><%= @pums.bk.under_18.count %></td>
-            <td><%= @pums.bk.yr18_24.count %></td>
-            <td><%= @pums.bk.yr25_34.count %></td>
-            <td><%= @pums.bk.yr35_44.count %></td>
-            <td><%= @pums.bk.yr45_64.count %></td>
-            <td><%= @pums.bk.over_65.count %></td>
+            <td class="tbl"><%= @pums.bk.under_18.count %></td>
+            <td class="tbl"><%= @pums.bk.yr18_24.count %></td>
+            <td class="tbl"><%= @pums.bk.yr25_34.count %></td>
+            <td class="tbl"><%= @pums.bk.yr35_44.count %></td>
+            <td class="tbl"><%= @pums.bk.yr45_64.count %></td>
+            <td class="tbl"><%= @pums.bk.over_65.count %></td>
           </tr>
           <tr>
             <td>Queens</td>
-            <td><%= @pums.qn.under_18.count %></td>
-            <td><%= @pums.qn.yr18_24.count %></td>
-            <td><%= @pums.qn.yr25_34.count %></td>
-            <td><%= @pums.qn.yr35_44.count %></td>
-            <td><%= @pums.qn.yr45_64.count %></td>
-            <td><%= @pums.qn.over_65.count %></td>
+            <td class="tbl"><%= @pums.qn.under_18.count %></td>
+            <td class="tbl"><%= @pums.qn.yr18_24.count %></td>
+            <td class="tbl"><%= @pums.qn.yr25_34.count %></td>
+            <td class="tbl"><%= @pums.qn.yr35_44.count %></td>
+            <td class="tbl"><%= @pums.qn.yr45_64.count %></td>
+            <td class="tbl"><%= @pums.qn.over_65.count %></td>
           </tr>
           <tr>
             <td>Staten Island</td>
-            <td><%= @pums.si.under_18.count %></td>
-            <td><%= @pums.si.yr18_24.count %></td>
-            <td><%= @pums.si.yr25_34.count %></td>
-            <td><%= @pums.si.yr35_44.count %></td>
-            <td><%= @pums.si.yr45_64.count %></td>
-            <td><%= @pums.si.over_65.count %></td>
+            <td class="tbl"><%= @pums.si.under_18.count %></td>
+            <td class="tbl"><%= @pums.si.yr18_24.count %></td>
+            <td class="tbl"><%= @pums.si.yr25_34.count %></td>
+            <td class="tbl"><%= @pums.si.yr35_44.count %></td>
+            <td class="tbl"><%= @pums.si.yr45_64.count %></td>
+            <td class="tbl"><%= @pums.si.over_65.count %></td>
             
           </tr>
           <tr>

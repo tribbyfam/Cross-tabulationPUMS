@@ -7,13 +7,13 @@
         <table class="table table-hover">
           <thead class="tab-content thead-dark" id="v-pills-tabContent">
             <tr>
-              <th scope="col" class="thead-dark table-h">
+              <th scope="col" class="table-h1">
                 Borough Name
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 Age over 65 years
               </th>
-              <th scope="col" class="thead-dark">
+              <th scope="col" class="table-h2">
                 Age under 65 years
               </th>
             </tr>
@@ -23,31 +23,31 @@
         <tbody>
           <tr>
             <td>Manhattan</td>
-            <td><%= @pums.mn.over_65.count %></td>
-            <td><%= @pums.mn.under_65.count %></td>
+            <td class="tbl"><%= @pums.mn.over_65.count %></td>
+            <td class="tbl"><%= @pums.mn.under_65.count %></td>
           </tr>
           <tr>
             <td>Bronx</td>
-            <td><%= @pums.bx.over_65.count %></td>
-            <td><%= @pums.bx.under_65.count %></td>
+            <td class="tbl"><%= @pums.bx.over_65.count %></td>
+            <td class="tbl"><%= @pums.bx.under_65.count %></td>
            
           </tr>
           <tr>
             <td>Brooklyn</td>
-            <td><%= @pums.bk.over_65.count %></td>
-            <td><%= @pums.bk.under_65.count %></td>
+            <td class="tbl"><%= @pums.bk.over_65.count %></td>
+            <td class="tbl"><%= @pums.bk.under_65.count %></td>
            
           </tr>
           <tr>
             <td>Queens</td>
-            <td><%= @pums.qn.over_65.count %></td>
-            <td><%= @pums.qn.under_65.count %></td>
+            <td class="tbl"><%= @pums.qn.over_65.count %></td>
+            <td class="tbl"><%= @pums.qn.under_65.count %></td>
             
           </tr>
           <tr>
             <td>Staten Island</td>
-            <td><%= @pums.si.over_65.count %></td>
-            <td><%= @pums.si.under_65.count %></td>     
+            <td class="tbl"><%= @pums.si.over_65.count %></td>
+            <td class="tbl"><%= @pums.si.under_65.count %></td>     
           </tr>
           <tr>
             <td>Total: <%= @pums.count(:age65plus) %></td>

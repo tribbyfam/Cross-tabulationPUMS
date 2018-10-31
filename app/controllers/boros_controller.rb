@@ -31,4 +31,9 @@ class BorosController < ApplicationController
     @boros = Boro.all
     @pums = Pum.all
   end
+
+  def boros_mutu
+    @boros = Boro.all
+    @pums = Pum.all
+  end
 end

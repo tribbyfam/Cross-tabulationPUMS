@@ -11,22 +11,22 @@
                 Borough Name
               </th>
               <th scope="col" class="table-h2">
-                Under 18yrs
+                White Non-hispanic
               </th>
               <th scope="col" class="table-h2">
-                18 to 24yrs
+                Black Non-hispanic
               </th>
               <th scope="col" class="table-h2">
-                25 to 34yrs
+                Hispanic
               </th>
               <th scope="col" class="table-h2">
-                35 to 44yrs
+                Asian Non-hispanic
               </th>
               <th scope="col" class="table-h2">
-                45 to 64yrs
+                Other Non-hispanic
               </th>
               <th scope="col" class="table-h2">
-                Over 65yrs
+                Two plus Non-hispanic
               </th>
             </tr>
           </thead>
@@ -34,41 +34,27 @@
         </div>
         <tbody>
           <tr>
-          
             <% @pumas.each do |puma| %>
 
             <td class="tbl"> <%= puma.name %> </td>
             <td class="tbl">
-            <%= puma.pums.where(agegroups: '1').length
+            <%= puma.pums.where(mutu: '1').length
             %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '2').length
+            <td class="tbl"><%= puma.pums.where(mutu: '2').length
             %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '3').length
+            <td class="tbl"><%= puma.pums.where(mutu: '3').length
             %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '4').length
+            <td class="tbl"><%= puma.pums.where(mutu: '4').length
             %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '5').length
+            <td class="tbl"><%= puma.pums.where(mutu: '5').length
             %></td>
-             <td class="tbl">
-            <%= puma.pums.where(agegroups: '6').length
+            <td class="tbl"><%= puma.pums.where(mutu: '6').length
             %></td>
           </tr>
-          <tr>
-            <td>Total: <%= puma.pums.count(:agegroups)%></td> 
+            <td>Total: <%= puma.pums.count(:mutu) %></td>
           </tr>
-            <% end %>
-          
-            <%# <td><%= @pums.group(:borough).count %></td> %>
-         
-          
-            <%# <td><%= @pums.order(borough: :asc, agegroups: :asc).group(:borough, :agegroups).count %>
+           <% end %>
         </tbody>
        
       </div>
     </div>
-
-  

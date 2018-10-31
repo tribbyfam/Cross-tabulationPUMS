@@ -1,0 +1,78 @@
+<h5>Borough Data</h5>
+
+  <%= render 'shared/nav_boro' %>
+  <div>
+    <div class="col-9 table media">
+      <div class="media-body">
+        <table class="table table-hover">
+          <thead class="tab-content thead-dark" id="v-pills-tabContent">
+            <tr>
+              <th scope="col" class="table-h1">
+                Borough Name
+              </th>
+              <th scope="col" class="table-h2">
+                White Non-hispanic
+              </th>
+              <th scope="col" class="table-h2">
+                Black Non-hispanic
+              </th>
+              <th scope="col" class="table-h2">
+                Hispanic
+              </th>
+              <th scope="col" class="table-h2">
+                Asian Non-hispanic
+              </th>
+              <th scope="col" class="table-h2">
+                Other Non-hispanic
+              </th>
+              <th scope="col" class="table-h2">
+                Two plus Non-hispanic
+              </th>
+            </tr>
+          </thead>
+        <thead>
+        </div>
+        <tbody>
+          <tr>
+            <td>Manhattan</td>
+            <td class="tbl"><%= @pums.mn.wnh.count %></td>
+            <td class="tbl"><%= @pums.mn.bnh.count %></td>
+            <td class="tbl"><%= @pums.mn.his.count %></td>
+            <td class="tbl"><%= @pums.mn.anh.count %></td>
+            <td class="tbl"><%= @pums.mn.onh.count %></td>
+            <td class="tbl"><%= @pums.mn.twonh.count %></td>
+          </tr>
+          <tr>
+            <td>Bronx</td>
+            <td class="tbl"><%= @pums.bx.wnh.count %></td>
+            <td class="tbl"><%= @pums.bx.bnh.count %></td>
+            <td class="tbl"><%= @pums.bx.his.count %></td>
+            <td class="tbl"><%= @pums.bx.anh.count %></td>
+            <td class="tbl"><%= @pums.bx.onh.count %></td>
+            <td class="tbl"><%= @pums.bx.twonh.count %></td>           
+          </tr>
+          <tr>
+            <td>Brooklyn</td>
+            <td class="tbl"><%= @pums.bk.wnh.count %></td>
+            <td class="tbl"><%= @pums.bk.bnh.count %></td>
+            <td class="tbl"><%= @pums.bk.his.count %></td>
+            <td class="tbl"><%= @pums.bk.anh.count %></td>
+            <td class="tbl"><%= @pums.bk.onh.count %></td>
+            <td class="tbl"><%= @pums.bk.twonh.count %></td>          
+          </tr>
+          <tr>
+            <td>Staten Island</td>
+            <td class="tbl"><%= @pums.si.wnh.count %></td>
+            <td class="tbl"><%= @pums.si.bnh.count %></td>
+            <td class="tbl"><%= @pums.si.his.count %></td>
+            <td class="tbl"><%= @pums.si.anh.count %></td>
+            <td class="tbl"><%= @pums.si.onh.count %></td>
+            <td class="tbl"><%= @pums.si.twonh.count %></td>     
+          </tr>
+          <tr>
+            <td>Total: <%= @pums.count(:mutu) %></td>
+          </tr>
+        </tbody>
+       
+      </div>
+    </div>
