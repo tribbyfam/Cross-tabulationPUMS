@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'boros_nativity', to: 'boros#boros_nativity' 
   get 'boros_age65', to: 'boros#boros_age65'
   get 'boros_mutu', to: 'boros#boros_mutu'
+  get 'about', to: 'static#about'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

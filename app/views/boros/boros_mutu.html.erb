@@ -2,21 +2,11 @@
 
   <%= render 'shared/nav_boro' %>
 
-  <div id="content">
-    <nav class="navbar navbar-expand-lg toggle-div">
-      <div class="container-fluid col-md-2 offset-md-3">
-        <button type="button" id="sidebarCollapse" class="btn btn-info toggle">
-          <i class="fas fa-align-left"></i>
-          <span>Toggle Bar</span>
-        </button>
-      </div>
-    </nav>
-  </div>
 
   <div>
     <div class="offset-md-3 table">
       <div>
-        <table class="table table-hover">
+        <table class="table table-hover display" id="table_id">
           <thead class="tab-content" id="v-pills-tabContent">
             <tr>
               <th scope="col" class="table-h1">
@@ -83,6 +73,12 @@
           </tr>
           <tr>
             <td>Total: <%= @pums.count(:mutu) %></td>
+            <td class="tbl"><%= @total_wnh %>%</td>
+            <td class="tbl"><%= @total_bnh %>%</td>
+            <td class="tbl"><%= @total_his %>%</td>
+            <td class="tbl"><%= @total_anh %>%</td>
+            <td class="tbl"><%= @total_onh %>%</td>
+            <td class="tbl"><%= @total_twonh %>%</td>
           </tr>
         </tbody>
        
