@@ -80,7 +80,13 @@
               <td class="tbl"><%= @pums.si.over_65.count %></td>             
             </tr>
             <tr>
-              <td>Total: <strong><%= @pums.count(:agegroups) %></strong> </td>              
+              <td>Total: <strong><%= @pums.count(:agegroups) %></strong> </td>  
+              <td class="tbl"><%= @total_under_18 %>% </td>
+              <td class="tbl"><%= @total_yr18_24 %>% </td> 
+              <td class="tbl"><%= @total_yr25_34 %>% </td> 
+              <td class="tbl"><%= @total_yr35_44 %>% </td> 
+              <td class="tbl"><%= @total_yr45_64 %>% </td>
+              <td class="tbl"><%= @total_over_65 %>% </td>              
             </tr>          
           </tbody>
         </table>
